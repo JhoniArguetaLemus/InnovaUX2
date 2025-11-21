@@ -1,164 +1,610 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InnovaUX - Diseño UX/UI</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-        }
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      #hero {
+        background-size: cover;
+        background-position: center;
+
+        background-color: #262e39;
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
+    <nav class="text-white p-4 absolute w-full z-20" id="navbar">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="#" class="text-2xl font-semibold font-poppins">InnovaUX</a>
 
-    <!-- Navbar -->
-    <nav class=" text-white p-4" id="navbar">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-semibold">InnovaUX</a>
+        <button
+          id="btnMenu"
+          class="md:hidden bg-white border-white p-[0.5rem] rounded-lg"
+        >
+          <img src="" alt="Menu" width="30" />
+        </button>
 
-            <button id="btnMenu" class="md:hidden bg-white border-white p-[0.5rem] rounded-lg">
-                <img src="images/menu.png" alt="" width="30">
-            </button>
-
-            <ul id="menu" class="flex hidden md:block md:flex  bg-black/50 md:bg-transparent md:w-auto md:static    flex-col md:flex-row  absolute top-[4.8rem] right-0  w-[50%] md:w-auto h-screen md:h-auto items-center gap-10">
-                <li><a href="#servicios" class="hover:text-blue-200 cursor-pointer ">Servicios</a></li>
-                <li><a href="#testimonios" class="hover:text-blue-200 cursor-pointer">Testimonios</a></li>
-                <li><a href="#contacto" class="hover:text-blue-200 cursor-pointer">Contacto</a></li>
-            </ul>
-        </div>
+        <ul
+          id="menu"
+          class="hidden md:flex bg-black/90 md:bg-transparent absolute md:static top-[4.8rem] right-0 w-full md:w-auto h-screen md:h-auto flex-col md:flex-row items-center gap-10 p-10 md:p-0"
+        >
+          <li>
+            <a href="#proceso" class="hover:text-blue-200 cursor-pointer"
+              >Cómo funciona</a
+            >
+          </li>
+          <li>
+            <a href="#servicios" class="hover:text-blue-200 cursor-pointer"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a href="#precio" class="hover:text-blue-200 cursor-pointer"
+              >Planes</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contacto"
+              class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition"
+              >Cotizar</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class=" h-[600px] flex items-center justify-center" >
-        <div class="absolute inset-0 bg-black opacity-10"></div>
-        <div class="relative z-10 text-center text-white p-12 ">
-            <h1 class="text-4xl font-bold mb-4">Transforma tu experiencia digital con InnovaUX</h1>
-            <p class="text-lg mb-6">Diseño UX/UI centrado en el usuario que convierte ideas en productos digitales intuitivos y atractivos.</p>
-            <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg">Solicita una consulta</a>
+    <section
+      id="hero"
+      class="h-[700px] flex items-center justify-center relative"
+    >
+      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <div
+        class="relative z-10 text-center text-white p-6 max-w-4xl mx-auto mt-10"
+      >
+        <h1
+          class="text-[2.5rem] md:text-[2.5rem] font-bold mb-6 leading-tight font-poppins"
+        >
+          ¿De qué sirve tener la mejor oferta si tus usuarios se frustran al interactuar?
+        </h1>
+
+        <p class="text-lg md:text-xl mb-8 text-gray-200">
+          En  <strong> InnovaUX</strong>, no solo hacemos diseños bonitos. Fusionamos psicología y tecnología para transformar visitantes perdidos en usuarios que convierten. El 88% de los usuarios no regresa tras una mala experiencia digital.
+          <br><br>
+         <Strong class=" text-[2rem]">No pierdas más conversiones.</Strong> 
+          
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a
+            href="#contacto"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition"
+            >Solicita una consulta</a
+          >
+          <a
+            href="#video-demo"
+            class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-semibold py-3 px-8 rounded-lg text-lg transition"
+            >Ver cómo funciona</a
+          >
         </div>
+      </div>
     </section>
 
-    <!-- Servicios Section -->
-    <section id="servicios" class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-10 mt-[4rem]">Nuestros Servicios</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section
+      data-aos="fade-up"
+      data-aos-duration="3000"
+      id="video-demo"
+      class="py-16 bg-white"
+    >
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-semibold mb-4 text-gray-800">
+          El impacto del UX en tu negocio
+        </h2>
+        <p class="text-gray-600 mb-8">
+          Descubre por qué las empresas líderes invierten en experiencia de
+          usuario.
+        </p>
 
-                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-center items-center">
-                    <img src="images/ux_ui.png" alt="" class="mb-[1rem]">
-                    <h3 class="text-xl font-semibold mb-4">Diseño UX/UI</h3>
-                    <p>Diseñamos interfaces centradas en el usuario, mejorando la usabilidad y estética de tus productos digitales.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center justify-center">
-                    <img src="images/consultoria.jpg" alt="" class="mb-[1rem]" width="200">
-                    <h3 class="text-xl font-semibold mb-4">Consultoría UX</h3>
-                    <p>Asesoría estratégica para startups tecnológicas, mejorando la retención de usuarios y optimizando la experiencia digital.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center justify-center">
-                    <img src="images/auditoria.webp" alt="" class="mb-[1rem]" width="200">
-                    <h3 class="text-xl font-semibold mb-4">Auditorías de Usabilidad</h3>
-                    <p>Realizamos pruebas y análisis para identificar y solucionar problemas de usabilidad en tu aplicación o página web.</p>
-                </div>
-            </div>
+        <div
+          class="relative w-full pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-2xl bg-gray-200"
+        >
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/G1qycvzsvro?si=mMc4XdBuAVFii8m_"
+            title="Video ejemplo UX"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+          <p>fuente</p>
         </div>
+      </div>
     </section>
 
-    <!--galeria de proyectos-->
-    <section id="proyectos" class="mb-[4rem]">
-        <h2 class="text-center text-3xl font-semibold  mb-[0.5rem] mt-[4rem]">Nuestros proyectos</h2>
-        <h3 class="font-semibold text-center mb-[3rem] text-2xl">Algunos de nuestros diseños más impactantes</h3>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-[95%] mx-auto">
-
-            <div class="bg-white shadow-lg p-[1rem] rounded-lg">
-                <h3 class="mb-[1rem]">Aplicación móvil para una tienda de zapatos</h3>
-                <div>
-                    <img src="images/shoes_shop.jpg" alt="">
-                </div>
-
-            </div>
-
-            <div class="bg-white shadow-lg p-[1rem] rounded-lg flex flex-col items-center justify-center">
-                <h3 class="mb-[1rem]">Aplicación móvil para un restaurante</h3>
-                <div>
-                    <img src="images/restaurante.png" alt="">
-                </div>
-
-            </div>
-           
-
-
-            <div class="bg-white shadow-lg p-[1rem] rounded-lg flex flex-col items-center justify-center">
-                <h3 class="mb-[1rem]">Aplicación móvil para un Banco</h3>
-                <div>
-                    <img src="images/banco.png" alt="">
-                </div>
-
-            </div>
-           
-           
-
-             
-
+    <section
+      data-aos="fade-up"
+      data-aos-duration="3000"
+      id="proceso"
+      class="py-20 bg-gray-50"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-semibold mb-4 text-gray-800">
+            Nuestro Proceso de 4 Fases
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Convertimos la incertidumbre en resultados tangibles a través de una
+            metodología probada.
+          </p>
         </div>
 
-    </section>
-
-    <!-- Testimonios Section -->
-    <section id="testimonios" class="py-20 bg-blue-400 text-white">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-10">Lo que dicen nuestros clientes</h2>
-            <div class="flex flex-wrap justify-center gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
-                    <p class="italic mb-4 text-black">"El diseño de InnovaUX transformó por completo la experiencia de nuestros usuarios. ¡La retención ha aumentado enormemente!"</p>
-                    <p class="font-semibold text-black">Carlos Portillo</p>
-                    <p class="text-black">CEO, Startup X</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
-                    <p class="italic mb-4 text-black">"Nos ayudaron a crear un flujo intuitivo en nuestra app, y el impacto en la usabilidad fue inmediato."</p>
-                    <p class="font-semibold text-black">Ana Gómez</p>
-                    <p class="text-black">Product Manager, Tech Startup</p>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-t-4 border-blue-500"
+          >
+            <div class="text-4xl mb-4">🔍</div>
+            <h3 class="text-xl font-bold mb-2">1. Inmersión</h3>
+            <p class="text-gray-600 text-sm">
+              Analizamos tu negocio y estudiamos dónde se "traban" tus usuarios
+              actualmente.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-t-4 border-blue-500"
+          >
+            <div class="text-4xl mb-4">✏️</div>
+            <h3 class="text-xl font-bold mb-2">2. Wireframing</h3>
+            <p class="text-gray-600 text-sm">
+              Creamos el esqueleto y la estructura de navegación antes de
+              aplicar diseño visual.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-t-4 border-blue-500"
+          >
+            <div class="text-4xl mb-4">🎨</div>
+            <h3 class="text-xl font-bold mb-2">3. Diseño UI</h3>
+            <p class="text-gray-600 text-sm">
+              Aplicamos identidad visual de alta fidelidad para crear una
+              conexión emocional.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition border-t-4 border-blue-500"
+          >
+            <div class="text-4xl mb-4">🚀</div>
+            <h3 class="text-xl font-bold mb-2">4. Entrega</h3>
+            <p class="text-gray-600 text-sm">
+              Te entregamos prototipos clicables y archivos listos para los
+              desarrolladores.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contacto Section -->
+    <section
+      data-aos-duration="3000"
+      data-aos="fade-up"
+      id="servicios"
+      class="py-20 bg-white"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
+      >
+        <div class="md:w-1/2">
+          <img
+            src="images/dashboard2.png"
+            alt="Dashboard Design"
+            class="rounded-lg shadow-2xl w-full h-64 bg-gray-200 object-cover"
+          />
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-semibold mb-6 text-gray-800">
+            Más que un diseño, un activo para tu empresa
+          </h2>
+          <p class="mb-6 text-gray-600">
+            Al contratar nuestra consultoría integral, obtienes herramientas
+            para escalar:
+          </p>
+
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <span class="text-green-500 font-bold text-xl">✓</span>
+              <span class="text-gray-700"
+                >Auditoría de UX y Diagnóstico de fallas.</span
+              >
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-green-500 font-bold text-xl">✓</span>
+              <span class="text-gray-700"
+                >User Personas & Customer Journey Maps.</span
+              >
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-green-500 font-bold text-xl">✓</span>
+              <span class="text-gray-700"
+                >Wireframes Interactivos y Prototipos Clicables.</span
+              >
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-green-500 font-bold text-xl">✓</span>
+              <span class="text-gray-700"
+                >Design System (Guía de estilos escalable).</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-aos-duration="3000"
+      data-aos="fade-up"
+      id="proyectos"
+      class="py-20 bg-gray-50"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-center text-3xl font-semibold mb-2">
+          Nuestros proyectos
+        </h2>
+        <h3 class="text-gray-600 text-center mb-12 text-xl">
+          Algunos de nuestros diseños más impactantes
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white shadow-lg p-4 rounded-lg hover:-translate-y-2 transition duration-300"
+          >
+            <h3 class="mb-3 font-semibold text-lg">App Tienda de Zapatos</h3>
+            <div class="bg-gray-200 h-48 rounded-md overflow-hidden">
+              <img
+                src="images/shoes_shop.jpg"
+                alt="Shoes App"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-white shadow-lg p-4 rounded-lg hover:-translate-y-2 transition duration-300"
+          >
+            <h3 class="mb-3 font-semibold text-lg">App Restaurante</h3>
+            <div class="bg-gray-200 h-48 rounded-md overflow-hidden">
+              <img
+                src="images/restaurante.png"
+                alt="Restaurant App"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-white shadow-lg p-4 rounded-lg hover:-translate-y-2 transition duration-300"
+          >
+            <h3 class="mb-3 font-semibold text-lg">Banca Móvil</h3>
+            <div class="bg-gray-200 h-48 rounded-md overflow-hidden">
+              <img
+                src="images/banco.png"
+                alt="Bank App"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-aos-duration="3000"
+      data-aos="fade-up"
+      id="precio"
+      class="py-20 bg-gray-900 text-white flex "
+    >
+
+    <!--servicio 1-->
+      <div class="max-w-4xl   mx-auto px-6 text-center" data-aos="fade-up" data-aos-duration="300">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Inversión Estratégica: Plan "Transformación Digital"
+        </h2>
+        <p class="text-xl text-gray-300 mb-10">
+          Deja de ver el diseño como un gasto y empieza a verlo como tu activo
+          más rentable.
+        </p>
+
+        <div
+          class="bg-white  h-[510px] text-gray-800 p-8 rounded-2xl shadow-2xl max-w-2xl mx-auto"
+        >
+          <div
+            class="text-sm  text-blue-600 font-bold tracking-wide uppercase mb-2"
+          >
+            Paquete Integral
+          </div>
+          <div class="text-5xl font-bold text-gray-900 mb-6">
+            $1,500<span class="text-lg font-normal text-gray-500"
+              >/ Proyecto</span
+            >
+          </div>
+
+          <div class="text-left space-y-4 mb-8 bg-gray-50 p-6 rounded-lg">
+            <p class="font-semibold">¿Por qué esta inversión se paga sola?</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>
+                📈 <strong>Recuperación rápida:</strong> Un UX optimizado puede
+                aumentar la conversión hasta un 400%.
+              </li>
+              <li>
+                💰 <strong>Ahorro en desarrollo:</strong> Al prototipar, evitas
+                gastar miles de dólares en corregir código después.
+              </li>
+              <li>
+                ❤️ <strong>Lealtad:</strong> Un cliente que entiende tu web es
+                un cliente que vuelve.
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="#contacto"
+            class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg text-lg transition shadow-lg"
+          >
+            Agendar llamada de valoración gratuita
+          </a>
+        </div>
+      </div>
+
+
+      <!--servicio 2-->
+      <div class="max-w-4xl mx-auto px-6 text-center"  data-aos="fade-up" data-aos-duration="300">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Servicio Premium: Plan "Éxito Sostenido"
+        </h2>
+        <p class="text-xl text-gray-300 mb-10">
+          Tu plataforma no es un lanzamiento, es una maratón. Asegura la máxima
+          velocidad y el soporte constante.
+        </p>
+
+        <div
+          class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl max-w-2xl mx-auto"
+        >
+          <div
+            class="text-sm text-green-600 font-bold tracking-wide uppercase mb-2"
+          >
+            Soporte Proactivo
+          </div>
+          <div class="text-5xl font-bold text-gray-900 mb-6">
+            $350<span class="text-lg font-normal text-gray-500">/ Mes</span>
+          </div>
+
+          <div class="text-left space-y-4 mb-8 bg-gray-50 p-6 rounded-lg">
+            <p class="font-semibold">¿Por qué el mantenimiento es clave?</p>
+            <ul class="space-y-2 text-gray-700">
+              <li>
+                🛡️ <strong>Seguridad 24/7:</strong> Monitoreo constante y
+                actualizaciones de parches para prevenir ataques.
+              </li>
+              <li>
+                🚀 <strong>Optimización Continua:</strong> Mantenimiento de la
+                velocidad de carga y mejoras en el rendimiento del servidor.
+              </li>
+              <li>
+                🛠️ <strong>Soporte Prioritario:</strong> 5 horas de soporte
+                dedicado al mes para corrección de errores y pequeños ajustes de
+                diseño.
+              </li>
+            </ul>
+          </div>
+          <a
+            href="#contacto"
+            class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg text-lg transition shadow-lg"
+          >
+            Agendar llamada de valoración gratuita
+          </a>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <section
+      data-aos-duration="3000"
+      data-aos="fade-up"
+      id="testimonios"
+      class="py-20 bg-blue-50"
+    >
+      <div class="max-w-6xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-semibold mb-12 text-gray-800">
+          Resultados que hablan por sí mismos
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-white p-8 rounded-xl shadow-md text-left relative">
+            <div
+              class="text-blue-200 text-6xl absolute top-4 left-4 font-serif"
+            >
+              “
+            </div>
+            <p class="italic mb-6 text-gray-600 relative z-10 pt-4">
+              "Gracias a Innova UX, redujimos los reclamos de soporte en un 60%
+              porque la plataforma ahora es intuitiva."
+            </p>
+            <div>
+              <p class="font-bold text-gray-900">Ing. Roberto M.</p>
+              <p class="text-sm text-gray-500">
+                Gerente de Operaciones, Logística Global
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-md text-left relative">
+            <div
+              class="text-blue-200 text-6xl absolute top-4 left-4 font-serif"
+            >
+              “
+            </div>
+            <p class="italic mb-6 text-gray-600 relative z-10 pt-4">
+              "El nuevo diseño de la app aumentó nuestros registros de usuarios
+              en un 200% el primer mes."
+            </p>
+            <div>
+              <p class="font-bold text-gray-900">Sandra P.</p>
+              <p class="text-sm text-gray-500">CEO, TechStart Fintech</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-md text-left relative">
+            <div
+              class="text-blue-200 text-6xl absolute top-4 left-4 font-serif"
+            >
+              “
+            </div>
+            <p class="italic mb-6 text-gray-600 relative z-10 pt-4">
+              "Entendieron perfectamente a nuestro cliente. La web es rápida,
+              limpia y vende sola."
+            </p>
+            <div>
+              <p class="font-bold text-gray-900">Carlos V.</p>
+              <p class="text-sm text-gray-500">Director eCommerce</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos-duration="3000"
+          data-aos="flip-up"
+          class="border-t border-gray-200 pt-10"
+        >
+          <p class="text-gray-500 mb-6 uppercase tracking-widest text-sm">
+            Herramientas y Certificaciones
+          </p>
+          <div
+            class="flex flex-wrap justify-center items-center gap-10 transition duration-500"
+          >
+            <img
+              src="images/logoFigma.png"
+              alt="Figma"
+              class="w-[150px] hover:scale-110"
+            />
+
+            <img
+              src="images/adobelogo.png"
+              alt="Adobe XD"
+              class="w-[110px] hover:scale-110"
+            />
+            <img
+              src="images/sketch.png"
+              alt="Sketch"
+              class="w-[150px] hover:scale-110"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-10">Contáctanos</h2>
-            <p class="text-lg mb-6">¿Listo para mejorar la experiencia de tus usuarios? Llena el formulario y nos pondremos en contacto contigo.</p>
-            <form action="#" class="max-w-xl mx-auto">
-                <div class="mb-4">
-                    <input type="text" name="nombre" class="w-full p-4 border rounded-lg" placeholder="Tu nombre" required>
-                </div>
-                <div class="mb-4">
-                    <input type="email" name="email" class="w-full p-4 border rounded-lg" placeholder="Tu correo electrónico" required>
-                </div>
-                <div class="mb-4">
-                    <textarea name="mensaje" class="w-full p-4 border rounded-lg" placeholder="Tu mensaje" required></textarea>
-                </div>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg">Enviar mensaje</button>
-            </form>
-        </div>
+      <div class="max-w-3xl mx-auto text-center px-6">
+        <h2 class="text-3xl font-semibold mb-6">
+          ¿Listo para escalar tu negocio?
+        </h2>
+        <p class="text-lg mb-10 text-gray-600">
+          Déjanos tus datos y diseñemos juntos la próxima gran experiencia de
+          tus usuarios.
+        </p>
+
+        <form
+          action="#"
+          class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div class="text-left">
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Nombre</label
+              >
+              <input
+                type="text"
+                name="nombre"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="Ej: Juan Pérez"
+                required
+              />
+            </div>
+            <div class="text-left">
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Empresa</label
+              >
+              <input
+                type="text"
+                name="empresa"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="Ej: Tu Empresa S.A."
+              />
+            </div>
+          </div>
+
+          <div class="mb-4 text-left">
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              name="email"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              placeholder="juan@empresa.com"
+              required
+            />
+          </div>
+
+          <div class="mb-6 text-left">
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >¿Cuál es tu mayor desafío actual?</label
+            >
+            <textarea
+              name="mensaje"
+              rows="4"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              placeholder="Ej: Mi web tiene visitas pero nadie compra..."
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition transform hover:scale-[1.02]"
+          >
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6">
-        <div class="max-w-6xl mx-auto text-center">
-            <p>&copy; 2025 InnovaUX</p>
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+      <div class="max-w-6xl mx-auto text-center px-6">
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="#" class="hover:text-blue-400">Instagram</a>
+          <a href="#" class="hover:text-blue-400">LinkedIn</a>
+          <a href="#" class="hover:text-blue-400">Behance</a>
         </div>
+        <p class="text-gray-500 text-sm">
+          &copy; 2025 InnovaUX.
+        </p>
+      </div>
     </footer>
 
-    <!-- JS -->
-    <script src="./js/app.js">
-        
+    <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
-</body>
+  </body>
 </html>
